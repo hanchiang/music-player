@@ -1,10 +1,10 @@
 
+const BPM = 118;
+Tone.Transport.bpm.value = BPM;
+
 
 // create a synth and connect it to the master output (your speakers)
 const synth = new Tone.Synth().toMaster();
-
-const BPM = 118;
-Tone.Transport.bpm.value = BPM;
 
 
 // e.g. 4/4 time signature, bpm = 60
@@ -29,7 +29,7 @@ const TRIPLET_CROTCHET = MINIM / 3;
 
 let sofar = 0;
 
-function synthSound(note, duration) {
+function playSynth(note, duration) {
   synth.triggerAttackRelease(note, duration, sofar);
   sofar += duration;
 }
@@ -37,29 +37,34 @@ function synthSound(note, duration) {
 // If I ain't got you: https://www.youtube.com/watch?v=Ju8Hr50Ckwk
 
 // some people live for the fortune
-synthSound('', CROTCHET + QUAVER);
-synthSound('B3', QUAVER + TRIPLET_QUAVER);
-synthSound('D4', TRIPLET_QUAVER);
-synthSound('E4', TRIPLET_QUAVER);
-synthSound('D4', MINIM);
-synthSound('B3', QUAVER);
-synthSound('G3', QUAVER);
-synthSound('A3', CROTCHET);
-synthSound('G3', 5 * CROTCHET);
+playSynth('', CROTCHET + QUAVER);
+playSynth('B3', QUAVER + TRIPLET_QUAVER);
+playSynth('D4', TRIPLET_QUAVER);
+playSynth('E4', TRIPLET_QUAVER);
+playSynth('D4', MINIM);
+playSynth('B3', QUAVER);
+playSynth('G3', QUAVER);
+playSynth('A3', CROTCHET);
+playSynth('G3', 5 * CROTCHET);
 
 // some people live just for the fame
-synthSound('', CROTCHET);
-synthSound('G4', CROTCHET + TRIPLET_QUAVER);
-synthSound('E4', TRIPLET_QUAVER);
-synthSound('D4', TRIPLET_QUAVER);
-synthSound('B3', CROTCHET);
-synthSound('D4', CROTCHET);
-synthSound('', TRIPLET_QUAVER);
-synthSound('E4', TRIPLET_QUAVER);
-synthSound('D4', TRIPLET_QUAVER);
-synthSound('F4', TRIPLET_QUAVER);
-synthSound('E4', TRIPLET_QUAVER);
-synthSound('D4', TRIPLET_QUAVER + 5 * CROTCHET);
+playSynth('', CROTCHET);
+playSynth('G4', CROTCHET + TRIPLET_QUAVER);
+playSynth('E4', TRIPLET_QUAVER);
+playSynth('D4', TRIPLET_QUAVER);
+playSynth('B3', CROTCHET);
+playSynth('D4', CROTCHET);
+playSynth('', TRIPLET_QUAVER);
+playSynth('E4', TRIPLET_QUAVER);
+playSynth('D4', TRIPLET_QUAVER);
+playSynth('F4', TRIPLET_QUAVER);
+playSynth('E4', TRIPLET_QUAVER);
+playSynth('D4', TRIPLET_QUAVER + 5 * CROTCHET);
+
 
 // attach a click listener to a play button
-document.querySelector('#play-btn').addEventListener('click', () => Tone.context.start());
+document.querySelector('#play-btn').addEventListener('click', () => Tone.context.resume());
+document.querySelector('#pause-btn').addEventListener('click', () => Tone.context.suspend());
+document.querySelector('#stop-btn').addEventListener('click', () => {
+  Tone.Transport.stop();
+});
