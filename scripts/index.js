@@ -61,6 +61,99 @@ playSynth('F4', TRIPLET_QUAVER);
 playSynth('E4', TRIPLET_QUAVER);
 playSynth('D4', TRIPLET_QUAVER + 5 * CROTCHET);
 
+// some people live for the power
+playSynth('', CROTCHET + QUAVER);
+playSynth('B3', QUAVER + TRIPLET_QUAVER);
+playSynth('D4', QUAVER);
+playSynth('E4', QUAVER);
+playSynth('D4', MINIM);
+playSynth('B3', QUAVER);
+playSynth('D4', QUAVER);
+playSynth('F4', CROTCHET + QUAVER);
+playSynth('E4', MINIM);
+playSynth('D4', MINIM + QUAVER);
+
+// TODO: sounds a little high/weird??
+// some people live just to play the game
+playSynth('', CROTCHET);
+playSynth('G4', CROTCHET);
+playSynth('E4', QUAVER);
+playSynth('D4', QUAVER);
+playSynth('G4', CROTCHET);
+playSynth('G4', QUAVER);
+playSynth('E4', QUAVER);
+playSynth('G4', QUAVER);
+playSynth('E4', QUAVER);
+playSynth('B4', QUAVER);
+playSynth('A4', MINIM + QUAVER);
+
+// some people think that the physical things define what's within
+playSynth('', SEMIBREVE);
+playSynth('B3', MINIM + TRIPLET_QUAVER);
+playSynth('A3', TRIPLET_QUAVER);
+playSynth('B3', TRIPLET_QUAVER);
+playSynth('C4', MINIM);
+
+playSynth('', TRIPLET_QUAVER);
+playSynth('B3', TRIPLET_QUAVER);
+playSynth('C4', TRIPLET_QUAVER);
+playSynth('D4', CROTCHET);
+playSynth('D4', CROTCHET);
+playSynth('D4', CROTCHET);
+playSynth('C4', MINIM);
+
+playSynth('D4', CROTCHET);
+playSynth('B3', MINIM + CROTCHET);
+playSynth('C4', MINIM);
+playSynth('C4', CROTCHET);
+playSynth('D4', MINIM + CROTCHET + CROTCHET);
+
+// and I've been there before
+playSynth('D4', MINIM);
+playSynth('B3', MINIM);
+playSynth('', TRIPLET_QUAVER);
+playSynth('A3', TRIPLET_QUAVER);
+playSynth('B3', TRIPLET_QUAVER);
+playSynth('C4', MINIM);
+playSynth('', CROTCHET);
+
+// that life's a bore, so full of the superficial
+playSynth('D4', CROTCHET);
+playSynth('D4', CROTCHET);
+playSynth('D4', CROTCHET);
+playSynth('C4', CROTCHET);
+playSynth('', CROTCHET);
+playSynth('D4', CROTCHET);
+playSynth('B3', MINIM);
+playSynth('', TRIPLET_QUAVER);
+playSynth('A3', TRIPLET_QUAVER);
+playSynth('B3', TRIPLET_QUAVER);
+playSynth('C4', CROTCHET);
+playSynth('B3', CROTCHET);
+playSynth('C4', CROTCHET);
+playSynth('D4', MINIM);
+playSynth('', CROTCHET);
+
+// TODO: Instrument sounds so bleak :O
+// some people want it all, but I don't want nothing at all
+playSynth('G4', CROTCHET);
+playSynth('A4', CROTCHET);
+playSynth('B4', CROTCHET);
+playSynth('B4', QUAVER + SEMIQUAVER);
+playSynth('B4', SEMIQUAVER);
+playSynth('B4', CROTCHET);
+playSynth('', QUAVER);
+playSynth('G4', QUAVER);
+playSynth('B4', CROTCHET);
+playSynth('D5', CROTCHET);
+playSynth('', QUAVER);
+playSynth('G4', QUAVER);
+playSynth('G4', TRIPLET_QUAVER);
+playSynth('A4', TRIPLET_QUAVER);
+playSynth('B4', TRIPLET_QUAVER);
+playSynth('B4', MINIM);
+
+
 
 // attach a click listener to a play button
 document.querySelector('#play-btn').addEventListener('click', () => Tone.context.resume());
