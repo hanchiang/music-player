@@ -1,5 +1,5 @@
 ## Introduction
-This is a simple project that plays music using Tone.js, an abstraction for the web audio API
+This is a simple project that plays music using [Tone.js](https://tonejs.github.io/), an abstraction for the web audio API
 
 ## How to Use
 1. Either `git clone https://github.com/hanchiang/music-player.git` or `Download ZIP`
